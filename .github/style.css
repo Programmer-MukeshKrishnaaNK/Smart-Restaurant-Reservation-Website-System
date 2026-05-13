@@ -1,0 +1,34 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --gold:#C59D5F;
+  --gold2:#F4D03F;
+  --bg:#0F0F0F;
+  --card:#1A1A1A;
+  --text:#F5F5F5;
+  --muted:#888;
+  --border:rgba(197,157,95,0.22);
+  --max:1200px;
+  --nav-h:72px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+button,a{cursor:pointer}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+/* NAV Styles */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:0 clamp(16px,4vw,48px);
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:rgba(15,15,15,0.75);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:background .4s,height .4s;
+}
+nav.scrolled{background:rgba(15,15,15,0.97);height:60px;--nav-h:60px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,4vw,1.75rem);font-weight:300;letter-spacing:.18em;color:var(--gold);text-decoration:none;flex-shrink:0}
+.nav-logo span{color:var(--text)}
